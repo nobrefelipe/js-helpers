@@ -143,7 +143,10 @@ const $_siblings = ( _this, me ) => (action, cls) => {
 const getBySelector = ( selector, context = document ) => Array.prototype.slice.call( context.querySelectorAll( selector ) );
 
 
-// EMULATES JQUERY's $ FUNCTION
+/*
+    EMULATES JQUERY's $ FUNCTION
+    use: $('.my-class')
+*/
 function $$ ( selector ) {
 
     this.e = getBySelector( selector );
@@ -152,6 +155,7 @@ function $$ ( selector ) {
 
     if ( this.e.length === 1 ) this.e = this.e[ 0 ];
 
+    // SIBLINGS ADD/REMOVE CLASS
     this.siblings = $_siblings( this , me );
 
     // TEXT
