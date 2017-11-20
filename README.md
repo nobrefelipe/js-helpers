@@ -85,7 +85,6 @@ const $_removeClass = ( _this, me ) => (cls) => {
 // ADD / REMOVE CLASSES TO SIBLINGS
 const $_siblings = ( _this, me ) => (action, cls) => {
 
-
     let elements = _this.e;
 
     if( !action || action != 'addClass' &&  action != 'removeClass'){
@@ -93,7 +92,6 @@ const $_siblings = ( _this, me ) => (action, cls) => {
         return `[[ ALERT ]] Action must be 'addClass' or 'removeClass' -> $(el).siblings('addClass', 'my-super-class')`;
 
     }
-
 
     elements.forEach(e => {
 
@@ -103,15 +101,14 @@ const $_siblings = ( _this, me ) => (action, cls) => {
         do {
 
             // If action = addCLass => lest add the class
-            if( action && action == 'addClass') el.classList.add(cls);
+            if( action == 'addClass') el.classList.add(cls);
 
             // If action = removeCLass => lest remove the class
-            if( action && action == 'removeClass') el.classList.remove(cls);
+            if( action == 'removeClass') el.classList.remove(cls);
 
         } while (el = el.nextSibling);
 
     });
-
 
     return me;
 
@@ -132,7 +129,6 @@ function $$ ( selector ) {
     let me = this;
 
     if ( this.e.length === 1 ) this.e = this.e[ 0 ];
-
 
     this.siblings = $_siblings( this , me );
 
