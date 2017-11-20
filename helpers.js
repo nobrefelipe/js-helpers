@@ -49,7 +49,7 @@ const $_val = ( _this, me ) => ( newval = undefined ) => {
 /* 
     ADD CLASS
     use: $(el).addClass('my-class');
-/* 
+*/
 const $_addClass = ( _this, me ) => (cls) => {
 
     let elements = _this.e;
