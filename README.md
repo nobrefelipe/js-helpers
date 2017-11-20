@@ -99,7 +99,7 @@ const $_removeClass = ( _this, me ) => (cls) => {
 ```
 
 /* 
-    ADD / REMOVE CLASSES TO SIBLINGS
+    REMOVE/ADD CLASSES TO SIBLINGS
     use: 
         add:    $(el).siblings('addClass','my-class');
         remove: $(el).siblings('removeClass','my-class');
