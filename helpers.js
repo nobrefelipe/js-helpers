@@ -83,6 +83,24 @@ const $_removeClass = ( _this, me ) => (cls) => {
 
 
 /* 
+    TOGGLE CLASS
+    use: $(el).toggleClass('my-class');
+*/
+const $_toggleClass = ( _this, me ) => (cls) => {
+
+    let elements = _this.e;
+
+    elements.forEach(el => {
+
+        el.classList.toggle(cls);
+
+    });
+
+    return me;
+};
+
+
+/* 
     REMOVE/ADD CLASSES TO SIBLINGS
     use: 
         add:    $(el).siblings('addClass','my-class');
@@ -142,6 +160,9 @@ function $$ ( selector ) {
     // VAL
     this.val = $_val( this , me );
 
+    // TOGGLE CLASS
+    this.toggleClass = $_toggleClass( this , me );
+    
     // ADD CLASS
     this.addClass = $_addClass( this , me );
 
