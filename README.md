@@ -14,7 +14,7 @@ Object.values(Components).map( (component) => component.name && Vue.component( c
 
 #### JAVASCRIPT HELPERS
 
-Vanila javascript jQuery like helpers
+Vanila javascript 'jQuery like' helpers
 
 ```
 // GET / SET TEXT
