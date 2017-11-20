@@ -14,6 +14,8 @@ Object.values(Components).map( (component) => component.name && Vue.component( c
 
 #### JAVASCRIPT HELPERS
 
+Vanila javascript jQuery like helpers to:
+
 ```
 // GET / SET TEXT
 const $_text = ( _this, me ) => ( newval = '' ) => {
