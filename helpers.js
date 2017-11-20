@@ -1,9 +1,19 @@
+/* ============= VUE.JS ============= */
+
+// Register All Components
+import * as Components from "./components/**/*";
+Object.values(Components).map( (component) => component.name && Vue.component( component.name, component ) );
+
+
+
+/* ============= JAVASCRIPT ============= */
+
 /* 
     GET/SET TEXT
     use: 
        get: $(el).text();
        set: $(el).text('some text');
-/*   
+*/
 const $_text = ( _this, me ) => ( newval = '' ) => {
 
     // if new val is null
@@ -22,7 +32,7 @@ const $_text = ( _this, me ) => ( newval = '' ) => {
     use: 
        get: $(input).val();
        set: $(input).val('some text');
-/* 
+*/
 const $_val = ( _this, me ) => ( newval = undefined ) => {
 
     // if new val is undefined
@@ -57,7 +67,7 @@ const $_addClass = ( _this, me ) => (cls) => {
 /* 
     REMOVE CLASS
     use: $(el).removeClass('my-class');
-/* 
+*/
 const $_removeClass = ( _this, me ) => (cls) => {
 
     let elements = _this.e;
@@ -77,7 +87,7 @@ const $_removeClass = ( _this, me ) => (cls) => {
     use: 
         add:    $(el).siblings('addClass','my-class');
         remove: $(el).siblings('removeClass','my-class');
-/* 
+*/
 const $_siblings = ( _this, me ) => (action, cls) => {
 
     let elements = _this.e;
