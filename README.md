@@ -100,10 +100,10 @@ const $_siblings = ( _this, me ) => (action, cls) => {
         // While the first child has next siblings
         do {
 
-            // If action = addCLass => lest add the class
+            // If action = addCLass => lets add the class
             if( action == 'addClass') el.classList.add(cls);
 
-            // If action = removeCLass => lest remove the class
+            // If action = removeCLass => lets remove the class
             if( action == 'removeClass') el.classList.remove(cls);
 
         } while (el = el.nextSibling);
