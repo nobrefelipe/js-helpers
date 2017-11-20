@@ -3,7 +3,7 @@ Some Javascript Helpers that I use day to day
 
 
 
-###VUE.JS HELPERS
+### VUE.JS HELPERS
 ```
 // Register All Components
 import * as Components from "./components/**/*";
@@ -11,7 +11,7 @@ Object.values(Components).map( (component) => component.name && Vue.component( c
 ```
 
 
-###JAVASCRIPT HELPERS
+### JAVASCRIPT HELPERS
 
 ```
 // GET / SET TEXT
