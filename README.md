@@ -17,7 +17,12 @@ Object.values(Components).map( (component) => component.name && Vue.component( c
 Vanila javascript `jQuery like` helpers
 
 ```
-// GET / SET TEXT
+/* 
+    GET/SET TEXT
+    use: 
+       get: $(el).text();
+       set: $(el).text('some text');
+/*   
 const $_text = ( _this, me ) => ( newval = '' ) => {
 
     // if new val is null
@@ -33,7 +38,12 @@ const $_text = ( _this, me ) => ( newval = '' ) => {
 ```
 
 ```
-// GET / SET VAL
+/* 
+    GET/SET VAL
+    use: 
+       get: $(input).val();
+       set: $(input).val('some text');
+/* 
 const $_val = ( _this, me ) => ( newval = undefined ) => {
 
     // if new val is undefined
@@ -49,7 +59,10 @@ const $_val = ( _this, me ) => ( newval = undefined ) => {
 ```
 
 ```
-// ADD CLASS HELPER
+/* 
+    ADD CLASS
+    use: $(el).addClass('my-class');
+/* 
 const $_addClass = ( _this, me ) => (cls) => {
 
     let elements = _this.e;
@@ -65,7 +78,10 @@ const $_addClass = ( _this, me ) => (cls) => {
 ```
 ```
 
-// REMOVE CLASS HELPER
+/* 
+    REMOVE CLASS
+    use: $(el).removeClass('my-class');
+/* 
 const $_removeClass = ( _this, me ) => (cls) => {
 
     let elements = _this.e;
@@ -82,7 +98,12 @@ const $_removeClass = ( _this, me ) => (cls) => {
 
 ```
 
-// ADD / REMOVE CLASSES TO SIBLINGS
+/* 
+    ADD / REMOVE CLASSES TO SIBLINGS
+    use: 
+        add:    $(el).siblings('addClass','my-class');
+        remove: $(el).siblings('removeClass','my-class');
+/* 
 const $_siblings = ( _this, me ) => (action, cls) => {
 
     let elements = _this.e;
